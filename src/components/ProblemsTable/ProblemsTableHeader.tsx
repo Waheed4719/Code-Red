@@ -14,7 +14,6 @@ const headers = [
     {
         name: 'Difficulty',
         key: 'difficulty'
-
     },
     {
         name: 'Category',

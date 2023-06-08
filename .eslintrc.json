@@ -99,28 +99,38 @@
         ]
       }
     ],
-    "@typescript-eslint/no-floating-promises": "warn",
-    "@typescript-eslint/no-misused-promises": "warn",
-    "@typescript-eslint/camelcase": "off",
-    "@typescript-eslint/require-await": "warn",
-    "@typescript-eslint/no-unused-expressions": [
-      "warn",
+    "@typescript-eslint/ban-types": [
+      "error",
       {
-        "allowShortCircuit": true
+        "extendDefaults": true,
+        "types": {
+          "{}": false
+        }
       }
-    ],
-    "@typescript-eslint/ban-ts-comment": "warn",
-    "@typescript-eslint/no-unnecessary-type-assertion": "warn",
-    "import/no-cycle": "warn",
-    "import/prefer-default-export": "off",
-    "import/no-dynamic-require": "warn",
-    "import/no-extraneous-dependencies": "off",
-    "import/no-named-as-default-member": "warn",
-    "import/order": "off",
-    "import/extensions": "off",
-    "arrow-body-style": "off",
-    "import/no-useless-path-segments": "off",
-    "import/export": "off",
-    "import/no-named-export": "off"
-  }
+    ]
+  },
+  "@typescript-eslint/no-floating-promises": "warn",
+  "@typescript-eslint/no-misused-promises": "warn",
+  "@typescript-eslint/camelcase": "off",
+  "@typescript-eslint/require-await": "warn",
+  "@typescript-eslint/no-unused-expressions": [
+    "warn",
+    {
+      "allowShortCircuit": true
+    }
+  ],
+  "@typescript-eslint/ban-ts-comment": "warn",
+  "@typescript-eslint/no-unnecessary-type-assertion": "warn",
+  "import/no-cycle": "warn",
+  "import/prefer-default-export": "off",
+  "import/no-dynamic-require": "warn",
+  "import/no-extraneous-dependencies": "off",
+  "import/no-named-as-default-member": "warn",
+  "import/order": "off",
+  "import/extensions": "off",
+  "arrow-body-style": "off",
+  "import/no-useless-path-segments": "off",
+  "import/export": "off",
+  "import/no-named-export": "off"
+}
 }
