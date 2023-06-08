@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import { RecoilRoot } from "recoil";
 import { ToastContainer } from "react-toastify";
+import { Providers } from "@/redux/provider";
 import "react-toastify/dist/ReactToastify.css";
 export default function App({ Component, pageProps }: AppProps) {
 	return (
@@ -16,8 +17,10 @@ export default function App({ Component, pageProps }: AppProps) {
 					content='Web application that contains coding problems and video solutions'
 				/>
 			</Head>
+			<Providers>
 			<ToastContainer />
 			<Component {...pageProps} />
+			</Providers>
 		</RecoilRoot>
 	);
 }
