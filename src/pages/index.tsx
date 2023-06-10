@@ -1,4 +1,5 @@
 import ProblemsTable from "@/components/ProblemsTable";
+import Toolbar from "@/components/Toolbar";
 import Topbar from "@/components/Topbar/Topbar";
 import useHasMounted from "@/hooks/useHasMounted";
 
@@ -20,6 +21,7 @@ export default function Home() {
 				>
 					&ldquo; QUALITY OVER QUANTITY &rdquo; 👇
 				</h1>
+				<Toolbar />
 				<ProblemsTable />
 			</main>
 		</>
