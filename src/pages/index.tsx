@@ -19,15 +19,16 @@ export default function Home() {
         >
           Code Red, Code Great!
         </h1>
-        <div className='grid grid-cols-4 mx-auto max-w-[1200px] gap-4'>
-          <div className='col-span-3'>
-            <Toolbar />
-            <ProblemsTable />
-          </div>
-          <div className='col-span-1'>
+        {/* <div className='grid grid-cols-4 mx-auto max-w-[1200px] gap-4 px-4 py-4'> */}
+        {/* <div className='col-span-3'> */}
+        <div>
+          <Toolbar />
+          <ProblemsTable />
+        </div>
+        {/* <div className='col-span-1'>
             <div className='bg-dark-layer-1 h-[300px] rounded-md'></div>
           </div>
-        </div>
+        </div> */}
       </main>
     </>
   )
