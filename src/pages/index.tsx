@@ -12,14 +12,22 @@ export default function Home() {
     <>
       <main className='bg-dark-layer-2 min-h-screen'>
         <Topbar />
+
         <h1
           className='text-2xl text-center text-gray-700 dark:text-gray-400 font-medium
 					uppercase mt-10 mb-5'
         >
-          &ldquo; QUALITY OVER QUANTITY &rdquo; 👇
+          Code Red, Code Great!
         </h1>
-        <Toolbar />
-        <ProblemsTable />
+        <div className='grid grid-cols-4 mx-auto max-w-[1200px] gap-4'>
+          <div className='col-span-3'>
+            <Toolbar />
+            <ProblemsTable />
+          </div>
+          <div className='col-span-1'>
+            <div className='bg-dark-layer-1 h-[300px] rounded-md'></div>
+          </div>
+        </div>
       </main>
     </>
   )

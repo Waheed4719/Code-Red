@@ -16,17 +16,16 @@ const CustomEditor = () => {
   }
 
   return (
-    <>
-      <Editor
-        id='Editor'
-        tinymceScriptSrc='/tinymce/tinymce.min.js'
-        value={content}
-        init={{
-          ...initFullProps,
-        }}
-        onEditorChange={setText}
-      />
-    </>
+    <Editor
+      id='Editor'
+      // tinymceScriptSrc='/tinymce/tinymce.min.js'
+      apiKey='qagffr3pkuv17a8on1afax661irst1hbr4e6tbv888sz91jc'
+      value={content}
+      init={{
+        ...initFullProps,
+      }}
+      onEditorChange={setText}
+    />
   )
 }
 

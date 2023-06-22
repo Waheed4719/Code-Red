@@ -45,11 +45,7 @@ const ProblemsTableBody: React.FC<ProblemsTableBodyProps> = ({
 
   return (
     <>
-      <div
-        className='min-w-fit'
-        // style={{ display: 'flex', flex: '1 0 auto', minWidth: 0 }}
-        // className='odd:bg-layer-1 even:bg-overlay-1 dark:odd:bg-dark-layer-bg dark:even:bg-dark-fill-4'
-      >
+      <div className='min-w-fit'>
         {problems.map((problem, idx) => {
           const difficulyColor =
             problem.difficulty === 'Easy'
