@@ -12,6 +12,7 @@ const DropdownItem = <T extends ReactNode>({
   value,
   handleItemChange,
 }: Props<T>) => {
+  console.log(selectedOption, value)
   return (
     <li
       className='relative flex h-8 cursor-pointer select-none py-1.5 pl-2 text-label-2 dark:text-dark-label-2 hover:bg-dark-fill-3 rounded-lg'

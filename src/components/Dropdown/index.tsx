@@ -17,15 +17,22 @@ const Dropdown = ({
   handleOptionSelect,
 }: Props) => {
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false)
+
   const handleClickDropdown = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
     e.stopPropagation()
     setDropdownIsOpen((prev) => !prev)
   }
+
+  const handleItemChange = (value: string) => {
+    handleOptionSelect(value)
+    setDropdownIsOpen(false)
+  }
+
   return (
     <ClickAwayComponent
-      className='flex-1 flex max-w-[170px]'
+      className='flex-1 flex'
       onClickAway={() => setDropdownIsOpen(false)}
     >
       <div className='relative w-full'>
@@ -37,6 +44,7 @@ const Dropdown = ({
           {label}
           <BsChevronDown />
         </button>
+
         {dropdownIsOpen && (
           <ul
             className='absolute mt-1 max-h-56 overflow-auto rounded-lg p-2 z-50 focus:outline-none shadow-lg w-fit  bg-dark-layer-1'
@@ -49,8 +57,8 @@ const Dropdown = ({
               <DropdownItem
                 key={value}
                 value={value}
-                selectedOption={selectedOption ?? options[0]}
-                handleItemChange={(val) => handleOptionSelect(val)}
+                selectedOption={selectedOption}
+                handleItemChange={(val) => handleItemChange(val)}
               />
             ))}
           </ul>
