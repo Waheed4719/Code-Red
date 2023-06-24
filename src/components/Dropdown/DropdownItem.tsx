@@ -7,7 +7,7 @@ type Props<T> = {
   handleItemChange: (value: T) => void
 }
 
-const DropdownItem = <T extends ReactNode | { id: number; value: string }>({
+const DropdownItem = <T extends ReactNode>({
   selectedOption,
   value,
   handleItemChange,
