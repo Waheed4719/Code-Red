@@ -2,12 +2,18 @@ import { useState } from 'react'
 import { BsChevronDown } from 'react-icons/bs'
 import DropdownItem from './DropdownItem'
 import ClickAwayComponent from '../ClickAwayComponent'
+import SearchFilterDropdown from './SearchFilterDropdown'
+
+type DropdownType = 'selection' | 'search-filter'
 
 type Props = {
-  label: string
+  label: string | React.ReactNode
   options: string[]
   selectedOption: string
   handleOptionSelect: (value: string) => void
+  type?: DropdownType
+  showArrow?: boolean
+  className?: string
 }
 
 const Dropdown = ({
@@ -15,6 +21,9 @@ const Dropdown = ({
   options,
   selectedOption,
   handleOptionSelect,
+  type = 'selection',
+  showArrow = true,
+  className,
 }: Props) => {
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false)
 
@@ -32,20 +41,26 @@ const Dropdown = ({
 
   return (
     <ClickAwayComponent
-      className='flex-1 flex'
+      className={`flex flex-1 ${className}`}
       onClickAway={() => setDropdownIsOpen(false)}
     >
       <div className='relative w-full'>
         <button
           onClick={handleClickDropdown}
-          className='text-sm w-full gap-4 text-white flex cursor-pointer items-center rounded px-3 py-1.5 text-left focus:outline-none whitespace-nowrap bg bg-dark-fill-3 hover:bg-dark-fill-2 active:bg-dark-fill-3 justify-between'
+          className='h-[32px] text-sm w-full gap-4 text-white flex cursor-pointer items-center rounded px-3 py-1.5 text-left focus:outline-none whitespace-nowrap bg bg-dark-fill-3 hover:bg-dark-fill-2 active:bg-dark-fill-3 justify-between'
           type='button'
         >
           {label}
-          <BsChevronDown />
+          {showArrow && (
+            <BsChevronDown
+              className={` transition-transform duration-200 ${
+                dropdownIsOpen ? 'rotate-180' : 'rotate-0'
+              }`}
+            />
+          )}
         </button>
 
-        {dropdownIsOpen && (
+        {dropdownIsOpen && type === 'selection' ? (
           <ul
             className='absolute mt-1 max-h-56 overflow-auto rounded-lg p-2 z-50 focus:outline-none shadow-lg w-fit  bg-dark-layer-1'
             style={{
@@ -62,7 +77,9 @@ const Dropdown = ({
               />
             ))}
           </ul>
-        )}
+        ) : dropdownIsOpen && type === 'search-filter' ? (
+          <SearchFilterDropdown options={options} />
+        ) : null}
       </div>
     </ClickAwayComponent>
   )

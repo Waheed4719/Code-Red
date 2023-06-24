@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-import { BsCheckCircle } from 'react-icons/bs'
+import { BsCheck2Circle } from 'react-icons/bs'
 import { AiFillYoutube } from 'react-icons/ai'
 import { IoClose } from 'react-icons/io5'
 import YouTube from 'react-youtube'
@@ -11,7 +11,6 @@ import {
   getDocs,
   orderBy,
   query,
-  where,
 } from 'firebase/firestore'
 import { auth, firestore } from '@/firebase/firebase'
 import { DBProblem } from '@/utils/types/problem'
@@ -65,7 +64,7 @@ const ProblemsTableBody: React.FC<ProblemsTableBodyProps> = ({
                 className='mx-2 w-[40px] basis-auto flex-[40] shrink-0 flex items-center py-[11px] font-medium whitespace-nowrap text-dark-green-s'
               >
                 {solvedProblems.includes(problem.id) && (
-                  <BsCheckCircle fontSize={'18'} width='18' />
+                  <BsCheck2Circle fontSize={'18'} width='18' />
                 )}
               </div>
               <div
@@ -152,7 +151,7 @@ const ProblemsTableBody: React.FC<ProblemsTableBodyProps> = ({
             <span className='h-2 flex-1 rounded-r-lg bg-fill-3 dark:bg-dark-fill-3'></span> */}
                   {problem.videoId ? (
                     <AiFillYoutube
-                      fontSize={'28'}
+                      fontSize={'20'}
                       className='cursor-pointer hover:text-red-600'
                       onClick={() =>
                         setYoutubePlayer({
