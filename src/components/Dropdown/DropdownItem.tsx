@@ -21,6 +21,7 @@ const DropdownItem = <T extends ReactNode>({
       <div className={`flex h-5 flex-1 items-center pr-2`}>
         <div className='whitespace-nowrap'>{value}</div>
       </div>
+
       <span
         className={`text-blue dark:text-dark-blue flex items-center dark:text-dark-label-2 pr-2 text-sm ${
           selectedOption === value ? 'visible' : 'invisible'
