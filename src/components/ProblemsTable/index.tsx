@@ -9,7 +9,7 @@ const ProblemsTable = (_: Props) => {
   const [loadingProblems, setLoadingProblems] = useState(true)
 
   return (
-    <div className='relative overflow-x-auto mx-auto pb-10'>
+    <div className='relative overflow-x-auto mx-auto pb-5'>
       {loadingProblems && (
         <div className='w-full max-w-[1200px] mx-auto animate-pulse'>
           {[...Array(10)].map((_, idx) => (

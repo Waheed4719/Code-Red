@@ -45,7 +45,7 @@ const ProblemsTableBody: React.FC<ProblemsTableBodyProps> = ({
   return (
     <>
       <div className='min-w-fit'>
-        {problems.map((problem, idx) => {
+        {problems.slice(0,5).map((problem, idx) => {
           const difficulyColor =
             problem.difficulty === 'Easy'
               ? 'text-olive dark:text-dark-olive'
@@ -133,23 +133,7 @@ const ProblemsTableBody: React.FC<ProblemsTableBodyProps> = ({
                 className='w-[84px] basis-auto flex-[84] shrink-0 mx-2 flex items-center py-[11px]'
               >
                 <div className='flex h-full w-full flex-row items-center'>
-                  {/* <span className='h-2 flex-1 rounded-l-lg bg-fill-3 dark:bg-dark-fill-3'></span>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              viewBox='0 0 24 24'
-              width='1em'
-              height='1em'
-              fill='currentColor'
-              className='flex-0 -mt-1.5 h-5 w-5 text-gray-5 dark:text-gray-7'
-            >
-              <path
-                fill-rule='evenodd'
-                d='M7 8v2H6a3 3 0 00-3 3v6a3 3 0 003 3h12a3 3 0 003-3v-6a3 3 0 00-3-3h-1V8A5 5 0 007 8zm8 0v2H9V8a3 3 0 116 0zm-3 6a2 2 0 100 4 2 2 0 000-4z'
-                clip-rule='evenodd'
-              ></path>
-            </svg>
-            <span className='h-2 flex-1 rounded-r-lg bg-fill-3 dark:bg-dark-fill-3'></span> */}
-                  {problem.videoId ? (
+                  {/* {problem.videoId ? (
                     <AiFillYoutube
                       fontSize={'20'}
                       className='cursor-pointer hover:text-red-600'
@@ -160,9 +144,9 @@ const ProblemsTableBody: React.FC<ProblemsTableBodyProps> = ({
                         })
                       }
                     />
-                  ) : (
+                  ) : ( */}
                     <p className='text-gray-400'>Coming soon</p>
-                  )}
+                  {/* )} */}
                 </div>
               </div>
             </div>

@@ -12,15 +12,18 @@ export default function Home() {
     <>
       <main className='bg-dark-layer-2 min-h-screen'>
         <Topbar />
-        <div className='grid grid-cols-4 mx-auto max-w-[1200px] gap-4 px-4 py-4 mt-10 mb-5'>
-          <div className='col-span-3'>
+        {/* <div className='grid grid-cols-4 mx-auto max-w-[1200px] gap-4 p-4 mt-10 mb-3'> */}
+          <div className='col-span-4 md:col-span-3 mt-10'>
             <Toolbar />
             <ProblemsTable />
           </div>
-          <div className='col-span-1'>
-            <div className='bg-dark-layer-1 h-[300px] rounded-md'></div>
-          </div>
-        </div>
+          {/* <div className='col-span-4 md:col-span-1'>
+            <div className='bg-dark-layer-1 h-[300px] rounded-md p-4'>
+              <h1 className='text-white text-center font-medium'>Statistics</h1>
+              <p className='text-white  text-center font-semibold'>Coming Soon...</p>
+            </div>
+          </div> */}
+        {/* </div> */}
       </main>
     </>
   )

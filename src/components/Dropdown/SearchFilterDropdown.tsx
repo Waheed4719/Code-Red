@@ -30,14 +30,14 @@ const SearchFilterDropdown = ({ options }: Props) => {
       <div className='flex gap-2 flex-wrap text-white'>
         {filteredOptions?.map((option) => (
           <div
-            className='bg-dark-layer-2 rounded-lg text-gray-400 px-2 py-1 text-[12px]'
+            className='bg-dark-fill-3 rounded-lg text-gray-400 px-2 py-1 text-[12px]'
             key={option}
           >
             {option}
           </div>
         ))}
       </div>
-      <div className='border-b border-gray-500'></div>
+      <div className='border-b border-gray-500 my-2'></div>
       <div className='w-full flex justify-end'>
         <button className='text-white font-medium text-md'>Reset</button>
       </div>

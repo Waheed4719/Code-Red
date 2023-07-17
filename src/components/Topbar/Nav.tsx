@@ -11,9 +11,9 @@ type Route = {
 }
 
 const routes: Route[] = [
-  { name: 'Explore', path: '/explore' },
+  // { name: 'Explore', path: '/explore' },
   { name: 'Problems', path: '/problems' },
-  { name: 'Discuss', path: '/discuss' },
+  // { name: 'Discuss', path: '/discuss' },
 ]
 
 const Nav = (props: Props) => {
@@ -30,6 +30,7 @@ const Nav = (props: Props) => {
       </Link>
       {routes.map((route) => (
         <Link
+          key={route.name}
           onClick={() => setActive(route.path)}
           href={route.path}
           className={`h-[22px] flex-1 relative hover:text-white`}

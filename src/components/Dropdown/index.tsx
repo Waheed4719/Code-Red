@@ -41,7 +41,7 @@ const Dropdown = ({
 
   return (
     <ClickAwayComponent
-      className={`flex flex-1 ${className}`}
+      className={`flex ${className}`}
       onClickAway={() => setDropdownIsOpen(false)}
     >
       <div className='relative w-full'>
