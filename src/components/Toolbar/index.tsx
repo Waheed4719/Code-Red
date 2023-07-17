@@ -27,7 +27,7 @@ const Toolbar = (props: ToolbarProps) => {
   }
 
   return (
-    <div className='flex gap-2 items-center w-full max-w-[1200px] mx-auto pb-2 overflow-x-auto'>
+    <div className='flex gap-2 items-center w-full max-w-[1200px] mx-auto pb-2 flex-wrap'>
       <Dropdown
         className='min-w-[100px]'
         label='Lists'

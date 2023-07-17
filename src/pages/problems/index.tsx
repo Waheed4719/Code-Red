@@ -13,7 +13,7 @@ export default function Home() {
       <main className='bg-dark-layer-2 min-h-screen'>
         <Topbar />
         {/* <div className='grid grid-cols-4 mx-auto max-w-[1200px] gap-4 p-4 mt-10 mb-3'> */}
-          <div className='col-span-4 md:col-span-3 mt-10'>
+          <div className='col-span-4 md:col-span-3 mt-10 p-4'>
             <Toolbar />
             <ProblemsTable />
           </div>
